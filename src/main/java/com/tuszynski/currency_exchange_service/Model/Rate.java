@@ -4,21 +4,17 @@ import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 
 @Data
-@NoArgsConstructor
 @Entity
 @JsonIgnoreProperties(ignoreUnknown = true)
 public class Rate {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private String no;
-    private String effectiveDate;
-    private double mid;
+    public String no;
+    public String effectiveDate;
+    public double mid;
 
     public Rate() {
 
